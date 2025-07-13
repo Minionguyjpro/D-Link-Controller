@@ -22,6 +22,8 @@ PLATFORMS = [
 ]
 
 CONF_HOST = "host"
+CONF_USERNAME = "username"
+CONF_PASSWORD = "password"
 CONF_SESSION_TOKEN = "session_token"
 
 DEFAULT_POLLING_RATE_S = 30  # 30 seconds

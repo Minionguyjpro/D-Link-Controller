@@ -15,6 +15,8 @@ class DLinkControllerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         data_schema = vol.Schema({
             vol.Required(CONF_HOST, description={"name": "Device IP Address"}): str,
+            vol.Required(CONF_USERNAME, description={"name": "Username"}): str,
+            vol.Optional(CONF_PASSWORD, description={"name": "Password"}): str,
             vol.Required(CONF_SESSION_TOKEN, description={"name": "Session Token"}): str,
         })
 
