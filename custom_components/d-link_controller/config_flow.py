@@ -1,6 +1,6 @@
 from homeassistant import config_entries
 import voluptuous as vol
-from .const import DOMAIN, CONF_HOST, CONF_SESSION_TOKEN
+from .const import DOMAIN, CONF_SESSION_TOKEN, CONF_HOST
 
 class DLinkControllerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for D-Link Controller."""
@@ -9,13 +9,13 @@ class DLinkControllerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         errors = {}
         if user_input is not None:
             return self.async_create_entry(
-                title="D-Link Controller",
+                title=f"D-Link Camera ({user_input[CONF_HOST]})",
                 data=user_input,
             )
 
         data_schema = vol.Schema({
-            vol.Required(CONF_HOST, description={"suggested_value": "", "name": "Device IP Address"}): str,
-            vol.Required(CONF_SESSION_TOKEN, description={"suggested_value": "", "name": "Session Token"}): str,
+            vol.Required(CONF_HOST, description={"name": "Device IP Address"}): str,
+            vol.Required(CONF_SESSION_TOKEN, description={"name": "Session Token"}): str,
         })
 
         return self.async_show_form(
