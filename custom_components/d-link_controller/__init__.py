@@ -56,9 +56,3 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if unload_ok:
         hass.data[DOMAIN].pop(entry.entry_id)
     return unload_ok
-
-    await hass.config_entries.flow.async_init(
-        DOMAIN,
-        context={"source": "discovery"},
-        data={CONF_DISCOVERED_DEVICE_INFO: discovered_info, CONF_SESSION_TOKEN: session_token},
-    )

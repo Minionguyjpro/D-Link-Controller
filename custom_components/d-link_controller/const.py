@@ -26,19 +26,9 @@ PLATFORMS = [
 ]
 
 CONF_HOST = "host"
-CONF_MAC = "mac"
 CONF_SESSION_TOKEN = "session_token"
-CONF_ADVANCED_SETTINGS = "advanced_settings"
-
-CONF_DISCOVERED_DEVICE_INFO = "discovered_device_info"
-
-STEP_INIT = "user"
-STEP_ADVANCED_SETTINGS = "advanced_config"
-STEP_DISCOVERY_REQUIRE_AUTH = "discovery_auth_confirm"
 
 DEFAULT_POLLING_RATE_S = 30  # 30 seconds
-
-CONF_ALTERNATIVE_IP = "ip_address"
 
 STARTUP_MESSAGE = f"""
 -------------------------------------------------------------------
