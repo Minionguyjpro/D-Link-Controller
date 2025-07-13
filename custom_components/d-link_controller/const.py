@@ -19,10 +19,10 @@ ISSUE_URL = "https://github.com/Minionguyjpro/D-Link-Controller/issues"
 PLATFORMS = [
     Platform.SWITCH,
     Platform.SENSOR,
-    Platform.BINARY_SENSOR,
-    Platform.LIGHT,
-    Platform.NUMBER,
-    Platform.UPDATE,
+#    Platform.BINARY_SENSOR,
+#    Platform.LIGHT,
+#    Platform.NUMBER,
+#    Platform.UPDATE,
 ]
 
 CONF_HOST = "host"
