@@ -1,0 +1,29 @@
+get_details:
+  name: Get Device Details
+  description: Perform an HTTP GET request to the specified URL and store the response in a state.
+  fields:
+    url:
+      name: URL
+      description: The URL to send the GET request to.
+      required: true
+      example: "http://192.168.1.162/getDeviceDetails"
+
+set_details:
+  name: Set Device Details
+  description: Perform an HTTP POST request to the specified URL with the provided data and store the response in a state.
+  fields:
+    url:
+      name: URL
+      description: The URL to send the POST request to.
+      required: true
+      example: "http://192.168.1.162/setDeviceDetails"
+    data:
+      name: Data
+      description: The data to send in the POST request (as a dictionary).
+      required: true
+      example: |
+        {
+          "SessionKey": "YOUR_SESSION_KEY",
+          "LEDControl": "0",
+          "ConfigSystemControl": "Apply"
+        }
