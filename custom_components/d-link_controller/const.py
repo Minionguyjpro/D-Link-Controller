@@ -9,10 +9,6 @@ NAME = "d-link_controller"
 DOMAIN = "d-link_controller"
 VERSION = "1.0.0"
 
-DISCOVERY_FEATURE_FLAG = "discovery"
-DISCOVERY_INTERVAL = timedelta(minutes=10)
-DISCOVERY_TIMEOUT = 5
-
 ISSUE_URL = "https://github.com/Minionguyjpro/D-Link-Controller/issues"
 
 # list the platforms that you want to support.
